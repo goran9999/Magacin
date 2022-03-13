@@ -10,24 +10,36 @@ public class Artikal {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv==null || naziv.trim().length()==0) {
+			throw new IllegalArgumentException("Naziv ne moze biti null ili prazan!");
+		}
 		this.naziv = naziv;
 	}
 	public int getSifra() {
 		return sifra;
 	}
 	public void setSifra(int sifra) {
+		if(sifra<0) {
+			throw new IllegalArgumentException("Sifra artikla ne moze biti negativan broj!");
+		}
 		this.sifra = sifra;
 	}
 	public String getOpis() {
 		return opis;
 	}
 	public void setOpis(String opis) {
+		if(opis==null||opis.trim().length()==0) {
+			throw new IllegalArgumentException("Opis ne moze biti null ili prazan!");
+		}
 		this.opis = opis;
 	}
 	public int getKolicina() {
 		return kolicina;
 	}
 	public void setKolicina(int kolicina) {
+		if(kolicina<0) {
+			throw new IllegalArgumentException("Kolicina ne moze biti negativan broj!");
+		}
 		this.kolicina = kolicina;
 	}
 	@Override

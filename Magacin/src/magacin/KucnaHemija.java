@@ -37,6 +37,9 @@ public class KucnaHemija {
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
+		if(rokTrajanja==null) {
+			throw new IllegalArgumentException();
+		}
 		this.rokTrajanja = rokTrajanja;
 	}
 
