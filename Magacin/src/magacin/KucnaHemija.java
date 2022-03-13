@@ -3,7 +3,7 @@ package magacin;
 import java.util.Date;
 
 public class KucnaHemija {
-	
+
 	private Date rokTrajanja;
 
 	@Override
@@ -31,13 +31,12 @@ public class KucnaHemija {
 		return true;
 	}
 
-
 	public Date getRokTrajanja() {
 		return rokTrajanja;
 	}
 
 	public void setRokTrajanja(Date rokTrajanja) {
-		if(rokTrajanja==null) {
+		if (rokTrajanja == null) {
 			throw new IllegalArgumentException();
 		}
 		this.rokTrajanja = rokTrajanja;
@@ -47,6 +46,5 @@ public class KucnaHemija {
 	public String toString() {
 		return "KucnaHemija [rokTrajanja=" + rokTrajanja + "]";
 	}
-	
-	
+
 }

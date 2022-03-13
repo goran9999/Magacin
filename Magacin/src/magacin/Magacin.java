@@ -5,17 +5,16 @@ import java.util.List;
 
 import interfejs.MagacinInterfejs;
 
-public class Magacin implements MagacinInterfejs{
+public class Magacin implements MagacinInterfejs {
 
-
-	private List<Artikal> artikli=new LinkedList<>();
+	private List<Artikal> artikli = new LinkedList<>();
 
 	@Override
 	public void dodajArtikal(Artikal artikal) {
 
-		if(artikal!=null) {
+		if (artikal != null) {
 			artikli.add(0, artikal);
-		}else {
+		} else {
 			throw new IllegalArgumentException("Artikal ne moze biti null!");
 		}
 
@@ -30,12 +29,11 @@ public class Magacin implements MagacinInterfejs{
 	@Override
 	public Artikal pretraziArtikal(int sifraArtikla) {
 		for (Artikal artikal : artikli) {
-			if(artikal.getSifra()==sifraArtikla) {
+			if (artikal.getSifra() == sifraArtikla) {
 				return artikal;
 			}
 		}
 		return null;
 	}
-	
 
 }
